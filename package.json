@@ -1,5 +1,5 @@
 {
-  "name": "polyfill-service-url-builder",
+  "name": "create-polyfill-service-url",
   "bin": {
     "create-polyfill-service-url": "./index.js"
   },
@@ -22,7 +22,10 @@
   },
   "version": "1.1.0",
   "dependencies": {
-    "polyfill-library": "^3.37.0"
+    "@financial-times/js-features-analyser": "0.0.4",
+    "execa": "^2.0.3",
+    "polyfill-library": "^3.37.0",
+    "yargs": "^13.3.0"
   },
   "repository": {
     "type": "git",
