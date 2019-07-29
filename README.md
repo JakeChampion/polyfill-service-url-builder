@@ -14,9 +14,10 @@ A Node.js command-line application for analysing your JavaScript file and genera
 ## Table Of Contents
 
   - [Usage](#usage)
-  - [Limitations](#limitations)
   - [Contributing](#contributing)
+  - [Versioning](#versioning)
   - [Publishing](#publishing)
+  - [Authors](#authors)
   - [Contact](#contact)
   - [Licence](#licence)
 
@@ -29,9 +30,18 @@ This project requires [Node.js] 10.x and [npm]. You can install with:
 > npx create-polyfill-service-url --file bundle.js
 ```
 
+## Contributing
+
+This module has a full suite of unit tests, and is verified with ESLint. You can use the following commands to check your code before opening a pull request:
+
+```sh
+npm test    # verify JavaScript code with ESLint and run the tests
+```
+
+
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/JakeChampion/polyfill-service-url-builder/tags). 
 
 ## Publishing
 
@@ -41,7 +51,7 @@ New versions of the module are published automatically by CI for every commit wh
 
 * **Jake Champion** - *Initial work* - [Jake Champion](https://github.com/JakeChampion)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JakeChampion/polyfill-service-url-builder/contributors) who participated in this project.
 
 ## Contact
 
