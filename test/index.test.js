@@ -45,3 +45,15 @@ test('Adds the constructor of a feature to the features querystring if the speci
     expect(actual).toEqual(expected);
 });
 
+test('Sorts the features in alphabetical order to make spotting changes when updating the url simpler', async () => {
+    const expected = 'https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from,DOMTokenList,fetch,String.prototype.padStart,WeakSet';
+    const actual = await generatePolyfillURL([
+        "String.prototype.padStart",
+        "fetch",
+        "WeakSet.prototype.delete",
+        "DOMTokenList.prototype.add",
+        "Array.from"
+    ]);
+    expect(actual).toEqual(expected);
+});
+
