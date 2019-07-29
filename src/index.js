@@ -33,7 +33,12 @@ async function generatePolyfillURL(features = []) {
         }
     }
 
-    return `${polyfillUrl}?features=${Array.from(featuresInPolyfillLibrary).join(',')}`;
+    // Sort array of strings alphabetically
+    const sortedFeatures = Array.from(featuresInPolyfillLibrary).sort(function (a, b) {
+        return a.localeCompare(b);
+    });
+
+    return `${polyfillUrl}?features=${sortedFeatures.join(',')}`;
 }
 
 module.exports = generatePolyfillURL
