@@ -11,8 +11,15 @@ async function generatePolyfillURL(features = []) {
     for (const feature of features) {
         if (polyfills.includes(feature)) {
             featuresInPolyfillLibrary.add(feature);
-        } else if (feature in aliases){
-                featuresInPolyfillLibrary.add(feature);
+        } else if (feature in aliases) {
+            featuresInPolyfillLibrary.add(feature);
+        } else if (feature.includes('.prototype')) {
+            const featureConstructor = feature.split('.prototype')[0];
+            if (polyfills.includes(featureConstructor)) {
+                featuresInPolyfillLibrary.add(featureConstructor);
+            } else if (featureConstructor in aliases) {
+                featuresInPolyfillLibrary.add(featureConstructor);
+            }
         }
     }
 

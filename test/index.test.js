@@ -37,3 +37,11 @@ test('Adds an alias to the features querystring if it matches multiple features 
     expect(actual).toEqual(expected);
 });
 
+test('Adds the constructor of a feature to the features querystring if the specific feature does not exist from within polyfill-library', async () => {
+    const expected = 'https://cdn.polyfill.io/v3/polyfill.min.js?features=DOMTokenList';
+    const actual = await generatePolyfillURL([
+        "DOMTokenList.prototype.add"
+    ]);
+    expect(actual).toEqual(expected);
+});
+
