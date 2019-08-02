@@ -24,10 +24,10 @@ A Node.js command-line application for analysing your JavaScript file and genera
 
 ## Usage
 
-This project requires [Node.js] 10.x and [npm]. You can install with:
+This project requires [Node.js] 10.x and [npm]. You can run it with:
 
 ```bash
-> npx create-polyfill-service-url --file bundle.js
+> npx create-polyfill-service-url analyse --file bundle.js
 ```
 
 ## Contributing
