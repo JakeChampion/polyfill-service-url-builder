@@ -7,7 +7,7 @@ A Node.js command-line application for analysing your JavaScript file and genera
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 ```bash
-> npx create-polyfill-service-url --file bundle.js
+> npx create-polyfill-service-url analyse --file bundle.js
 ```
 
 
