@@ -11,6 +11,15 @@ require("yargs")
             demandOption: true
         }
     }, async function parseFile(argv) {
+        const browserslist = require('browserslist');
+        const browsersListConfig = browserslist.loadConfig({
+            path:  process.cwd()
+        })
+        let browsers = []
+        if (browsersListConfig) {
+            browsers = browserslist(browsersListConfig);
+        }
+
         const generatePolyfillURL = require('./src/index.js');
         const path = require('path');
         const babel = require("@babel/core");
@@ -40,7 +49,7 @@ require("yargs")
                 code: false
             });
             
-            console.log(await generatePolyfillURL(JSON.parse(fs.readFileSync(outputDestination, 'utf-8'))));
+            console.log(await generatePolyfillURL(JSON.parse(fs.readFileSync(outputDestination, 'utf-8')), browsers));
 
         } catch (error) {
             if (error instanceof SyntaxError) {
