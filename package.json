@@ -26,7 +26,7 @@
     "execa": "^4.0.0",
     "polyfill-library": "^3.37.0",
     "semver": "^7.1.1",
-    "yargs": "^13.3.0"
+    "yargs": "^15.1.0"
   },
   "repository": {
     "type": "git",
