@@ -11,12 +11,12 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/git": "^8.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.1.0",
     "jest": "^24.8.0",
-    "semantic-release": "^15.13.18"
+    "semantic-release": "^16.0.1"
   },
   "version": "2.0.0",
   "dependencies": {
