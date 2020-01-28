@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
-    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^8.0.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
