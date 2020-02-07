@@ -1,0 +1,17 @@
+{
+	"description": "Analyse your JavaScript file and generate a polyfill.io URL based on all the features that are being used from within the JavaScript file.",
+	"origamiType": null,
+	"origamiVersion": 1,
+	"keywords": [
+		"polyfills",
+		"bundle",
+		"generator",
+		"analysis"
+	],
+	"support": "https://github.com/Financial-Times/polyfill-service-url-builder/issues",
+	"supportStatus": "active",
+	"supportContact": {
+		"email": "origami.support@ft.com",
+		"slack": "financialtimes/origami-support"
+	}
+}
