@@ -3,6 +3,8 @@
 const polyfillLibrary = require("polyfill-library");
 const UA = require("@financial-times/polyfill-useragent-normaliser");
 const semver = require("semver");
+const TYPE_NOTHING = Symbol("nothing");
+const TYPE_URL = Symbol("url");
 /*
 [
   'android',     'bb',
@@ -101,7 +103,7 @@ async function generatePolyfillURL(features = [], supportedBrowsers = []) {
           if (name in browsersWithoutFeature) {
             const browserRangeWithoutFeature = browsersWithoutFeature[name];
             if (semver.satisfies(version, browserRangeWithoutFeature)) {
-              console.log(
+              console.error(
                 name,
                 version.toString(),
                 "does not support",
@@ -109,15 +111,15 @@ async function generatePolyfillURL(features = [], supportedBrowsers = []) {
               );
               return false;
             } else {
-              console.log(name, version.toString(), "supports", feature);
+              console.error(name, version.toString(), "supports", feature);
               return true;
             }
           } else {
             if (name in browserBaselines) {
-              console.log(name, version.toString(), "supports", feature);
+              console.error(name, version.toString(), "supports", feature);
               return true;
             } else {
-              console.log(
+              console.error(
                 "we do not know if",
                 name,
                 version.toString(),
@@ -144,10 +146,18 @@ async function generatePolyfillURL(features = [], supportedBrowsers = []) {
   });
 
   if (sortedFeatures.length === 0) {
-    return "You do not need to use polyfill.io as all your supported browsers support all the features your website currently uses.";
+    return {
+      type: TYPE_NOTHING,
+      message: "You do not need to use polyfill.io as all your supported browsers support all the features your website currently uses."
+    };
   } else {
-    return `${polyfillUrl}?features=${sortedFeatures.join(",")}`;
+    return {
+      type: TYPE_URL,
+      message: `${polyfillUrl}?features=${sortedFeatures.join(",")}`
+    }
   }
 }
 
 module.exports = generatePolyfillURL;
+module.exports.TYPE_URL = TYPE_URL;
+module.exports.TYPE_NOTHING = TYPE_NOTHING;

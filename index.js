@@ -49,17 +49,22 @@ require("yargs")
                 code: false
             });
             
-            console.log(await generatePolyfillURL(JSON.parse(fs.readFileSync(outputDestination, 'utf-8')), browsers));
-
+            const result = await generatePolyfillURL(JSON.parse(fs.readFileSync(outputDestination, 'utf-8')), browsers);
+            
+            if (result.type === generatePolyfillURL.TYPE_URL) {
+                console.log(result.value);
+            } else if (result.type === generatePolyfillURL.TYPE_NOTHING) {
+                console.error(result.value)
+            }
         } catch (error) {
             if (error instanceof SyntaxError) {
-                console.log("Failed to parse the JavaScript from xxx because it has a syntax error.")
+                console.error("Failed to parse the JavaScript from xxx because it has a syntax error.")
                 delete error.stack;
                 delete error.code;
                 delete error.pos;
                 delete error.loc;
                 const result = /: (?<errorType>[\w ]+) \((?<position>\d+:\d+)\)/.exec(error.message);
-                console.log(result.groups.errorType)
+                console.error(result.groups.errorType)
                 error.message = error.message.replace(` ${result.groups.errorType} `, '');
                 error.message = error.message.replace(`(${result.groups.position})`, result.groups.position);
                 console.error(error.message);
