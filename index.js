@@ -68,6 +68,9 @@ require("yargs")
                 error.message = error.message.replace(` ${result.groups.errorType} `, '');
                 error.message = error.message.replace(`(${result.groups.position})`, result.groups.position);
                 console.error(error.message);
+            } else {
+                console.error("Failed to parse the JavaScript from xxx because an error occured:")
+                console.error(error);
             }
         }
     })
