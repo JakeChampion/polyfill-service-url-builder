@@ -50,6 +50,9 @@ function normaliseBrowsers(browsers) {
             break;
           }
         }
+        if (range === 'all') {
+          range = "*";
+        }
         return name + " " + semver.coerce(range, { loose: true }).toString();
       })
     ),
