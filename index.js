@@ -52,9 +52,9 @@ require("yargs")
             const result = await generatePolyfillURL(JSON.parse(fs.readFileSync(outputDestination, 'utf-8')), browsers);
             
             if (result.type === generatePolyfillURL.TYPE_URL) {
-                console.log(result.value);
+                console.log(result.message);
             } else if (result.type === generatePolyfillURL.TYPE_NOTHING) {
-                console.error(result.value)
+                console.error(result.message)
             }
         } catch (error) {
             if (error instanceof SyntaxError) {
