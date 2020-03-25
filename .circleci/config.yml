@@ -7,14 +7,15 @@ jobs:
     steps:
       - checkout
       - run: npm cit
-      - run: npx @commitlint/cli --from=origin/master --to=HEAD --verbose
   publish_to_npm:
     docker:
       - image: circleci/node:10
     steps:
       - checkout
-      - run: npm cit
-      - run: npm run semantic-release
+      - run: npm ci
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run: npm version --no-git-tag-version ${CIRCLE_TAG}
+      - run: npm publish
   
 workflows:
   test:
