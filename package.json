@@ -4,7 +4,9 @@
   "scripts": {
     "fix": "eslint . --fix",
     "lint": "eslint .",
-    "test": "npm run lint && jest test --passWithNoTests"
+    "test": "npm run lint && jest test --passWithNoTests",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
@@ -18,7 +20,8 @@
     "execa": "^4.0.0",
     "polyfill-library": "^3.37.0",
     "semver": "^7.1.1",
-    "yargs": "^15.1.0"
+    "yargs": "^15.1.0",
+    "snyk": "^1.319.1"
   },
   "repository": {
     "type": "git",
@@ -30,5 +33,6 @@
   "homepage": "https://github.com/Financial-Times/polyfill-service-url-builder#readme",
   "author": "Jake Champion",
   "license": "MIT",
-  "description": "Analyse your JavaScript file and generate a polyfill.io URL based on all the features that are being used from within the JavaScript file."
+  "description": "Analyse your JavaScript file and generate a polyfill.io URL based on all the features that are being used from within the JavaScript file.",
+  "snyk": true
 }
