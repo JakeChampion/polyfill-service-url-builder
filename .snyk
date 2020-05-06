@@ -1,0 +1,170 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@babel/core > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
+    - '@financial-times/js-features-analyser > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-06T18:55:45.980Z'
