@@ -100,7 +100,7 @@ async function generatePolyfillURL(features = [], supportedBrowsers = []) {
   if (supportedBrowsers.length > 0) {
     for (const feature of featuresInPolyfillLibrary) {
       const featureConfig = await polyfillLibrary.describePolyfill(feature);
-      const browsersWithoutFeature = featureConfig.browsers;
+      const browsersWithoutFeature = featureConfig ? featureConfig.browsers : {};
       const allSupportedBrowsersSupportFeatureNatively = supportedBrowsers.every(
         ([name, version]) => {
           if (name in browsersWithoutFeature) {
