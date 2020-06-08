@@ -30,6 +30,12 @@ This project requires [Node.js] 10.x and [npm]. You can run it with:
 > npx create-polyfill-service-url analyse --file bundle.js
 ```
 
+You can pass multiple files as argument if you split your bundle files:
+
+```bash
+npx create-polyfill-service-url analyse --file app.js vendor.js
+```
+
 ## Contributing
 
 This module has a full suite of unit tests, and is verified with ESLint. You can use the following commands to check your code before opening a pull request:
