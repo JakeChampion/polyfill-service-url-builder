@@ -63,7 +63,7 @@ async function generatePolyfillURL(features = [], supportedBrowsers = []) {
   if (supportedBrowsers) {
     supportedBrowsers = normaliseBrowsers(supportedBrowsers);
   }
-  const polyfillUrl = "https://cdn.polyfill.io/v3/polyfill.min.js";
+  const polyfillUrl = "https://polyfill.io/v3/polyfill.min.js";
   const aliases = await polyfillLibrary.listAliases();
   const polyfills = await polyfillLibrary.listAllPolyfills();
   const featuresInPolyfillLibrary = new Set();
