@@ -51,7 +51,7 @@ function normaliseBrowsers(browsers) {
           }
         }
         if (range === 'all' || range === '*') {
-          return name + " *";
+          return name + " " + Number.MAX_SAFE_INTEGER + ".0.0";
         } else {
           return name + " " + semver.coerce(range, { loose: true }).toString();
         }
