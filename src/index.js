@@ -50,10 +50,11 @@ function normaliseBrowsers(browsers) {
             break;
           }
         }
-        if (range === 'all') {
-          range = "*";
+        if (range === 'all' || range === '*') {
+          return name + " *";
+        } else {
+          return name + " " + semver.coerce(range, { loose: true }).toString();
         }
-        return name + " " + semver.coerce(range, { loose: true }).toString();
       })
     ),
     a => a.split(" ")
