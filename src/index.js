@@ -51,7 +51,10 @@ function normaliseBrowsers(browsers) {
           }
         }
         if (range === 'all' || range === '*') {
-          return name + " " + Number.MAX_SAFE_INTEGER + ".0.0";
+          range = browserBaselines[name];
+          if (range === "*") {
+            range = ">0.0.0"
+          }
         } else {
           return name + " " + semver.coerce(range, { loose: true }).toString();
         }
