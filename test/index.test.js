@@ -58,7 +58,7 @@ test('Sorts the features in alphabetical order to make spotting changes when upd
 });
 
 test('Accepts a browserlist array', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.from,DOMTokenList,fetch,String.prototype.padStart,WeakSet';
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.from';
     const actual = await generatePolyfillURL([
         "Array.from"
     ], ["op_mini *"]);
