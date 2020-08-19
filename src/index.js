@@ -55,9 +55,8 @@ function normaliseBrowsers(browsers) {
           if (range === "*") {
             range = ">0.0.0"
           }
-        } else {
-          return name + " " + semver.coerce(range, { loose: true }).toString();
         }
+        return name + " " + semver.coerce(range, { loose: true }).toString();
       })
     ),
     a => a.split(" ")
