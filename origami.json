@@ -1,6 +1,6 @@
 {
 	"description": "Analyse your JavaScript file and generate a polyfill.io URL based on all the features that are being used from within the JavaScript file.",
-	"origamiType": null,
+	"origamiType": "cli",
 	"origamiVersion": 1,
 	"keywords": [
 		"polyfills",
