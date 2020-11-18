@@ -20,7 +20,7 @@
     "execa": "^4.0.0",
     "polyfill-library": "^3.37.0",
     "semver": "^7.1.1",
-    "yargs": "^15.1.0",
+    "yargs": "^16.0.0",
     "snyk": "^1.319.1"
   },
   "repository": {
