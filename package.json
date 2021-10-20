@@ -21,7 +21,7 @@
     "polyfill-library": "^3.37.0",
     "semver": "^7.1.1",
     "yargs": "^15.1.0",
-    "snyk": "^1.465.0"
+    "snyk": "^1.685.0"
   },
   "repository": {
     "type": "git",
