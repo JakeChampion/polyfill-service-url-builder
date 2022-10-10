@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "eslint": "^7.0.0",
-    "jest": "^26.0.0"
+    "jest": "^26.0.0",
+    "tinysh": "^1.0.0"
   },
   "version": "2.0.4",
   "dependencies": {
