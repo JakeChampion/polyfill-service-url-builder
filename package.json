@@ -1,7 +1,7 @@
 {
   "name": "create-polyfill-service-url",
   "bin": "./index.js",
-  "main": "./parse.js",
+  "main": "./analyse.js",
   "scripts": {
     "fix": "eslint . --fix",
     "lint": "eslint .",

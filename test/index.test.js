@@ -64,3 +64,11 @@ test('Accepts a browserlist array', async () => {
     ], ["op_mini *"]);
     expect(actual.message).toEqual(expected);
 });
+
+test('Accepts a custom hostname', async () => {
+    const expected = 'https://example.com/v3/polyfill.min.js?features=Array.from';
+    const actual = await generatePolyfillURL([
+        "Array.from"
+    ], [], "example.com");
+    expect(actual.message).toEqual(expected);
+});
