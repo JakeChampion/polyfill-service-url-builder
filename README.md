@@ -22,17 +22,29 @@ A Node.js command-line application for analysing your JavaScript file and genera
 
 
 ## Usage
-
+### CLI
 This project requires [Node.js] 10.x and [npm]. You can run it with:
 
 ```bash
-> npx create-polyfill-service-url analyse --file bundle.js
+> npx create-polyfill-service-url analyse --file bundle.js [--cwd "/custom/pwd" --omit "Array.prototype.includes" --hostname "polyfill.io"]
 ```
 
 You can pass multiple files as argument if you split your bundle files:
 
 ```bash
 npx create-polyfill-service-url analyse --file app.js vendor.js
+```
+
+### JS API
+```js
+const analyze = require('create-polyfill-service-url');
+
+const result = await analyze({
+  file: ['bundle.js'],
+  cwd: '/foo/bar',                    // Defaults to process.cwd()
+  omit: ['Array.prototype.includes'], // Defaults to []
+  hostname: 'example.com',            // Defaults to 'polyfill.io'
+});
 ```
 
 ## Contributing

@@ -1,7 +1,7 @@
 {
   "name": "create-polyfill-service-url",
   "bin": "./index.js",
-  "main": "./parse.js",
+  "main": "./analyse.js",
   "scripts": {
     "fix": "eslint . --fix",
     "lint": "eslint .",
@@ -21,8 +21,8 @@
     "execa": "^4.0.0",
     "polyfill-library": "^3.108.0",
     "semver": "^7.1.1",
-    "yargs": "^15.1.0",
-    "snyk": "^1.752.0"
+    "snyk": "^1.752.0",
+    "yargs": "^15.1.0"
   },
   "repository": {
     "type": "git",
