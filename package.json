@@ -1,7 +1,14 @@
 {
   "name": "create-polyfill-service-url",
   "bin": "./index.js",
-  "main": "./analyse.js",
+  "main": "./src/analyse.js",
+  "files": [
+    "index.js",
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ],
   "scripts": {
     "fix": "eslint . --fix",
     "lint": "eslint .",
