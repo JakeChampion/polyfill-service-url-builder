@@ -44,6 +44,9 @@ const result = await analyze({
   cwd: '/foo/bar',                    // Defaults to process.cwd()
   omit: ['Array.prototype.includes'], // Defaults to []
   hostname: 'example.com',            // Defaults to 'polyfill.io'
+  unknown: 'polyfill',                // Defaults to null. Accepts 'polyfill' or 'ignore'
+  useComputeAtEdgeBackend: 'yes',     // Defaults to null. Accepts 'yes' or 'no'
+  flags: 'gated',                     // Defaults to null. Accepts 'always', 'gated' or both ['always', 'gated']
 });
 ```
 
