@@ -62,7 +62,14 @@ function normaliseBrowsers(browsers) {
     a => a.split(" ")
   );
 }
-async function generatePolyfillURL(features = [], supportedBrowsers = [], hostname = "polyfill.io") {
+async function generatePolyfillURL(
+  features = [],
+  supportedBrowsers = [],
+  hostname = "polyfill.io",
+  flags = null,
+  useComputeAtEdgeBackend = null,
+  unknown = null
+) {
   if (supportedBrowsers) {
     supportedBrowsers = normaliseBrowsers(supportedBrowsers);
   }
@@ -156,12 +163,27 @@ async function generatePolyfillURL(features = [], supportedBrowsers = [], hostna
       type: TYPE_NOTHING,
       message: "You do not need to use polyfill.io as all your supported browsers support all the features your website currently uses."
     };
-  } else {
-    return {
-      type: TYPE_URL,
-      message: `${polyfillUrl}?features=${sortedFeatures.join(",")}`
-    }
   }
+
+  const url = new URL(polyfillUrl);
+  url.searchParams.set("features", sortedFeatures.join(","));
+
+  if (flags) {
+    url.searchParams.set("flags", Array.isArray(flags) ? flags.join(",") : flags);
+  }
+
+  if (useComputeAtEdgeBackend) {
+    url.searchParams.set("use-compute-at-edge-backend", useComputeAtEdgeBackend);
+  }
+
+  if (unknown) {
+    url.searchParams.set("unknown", unknown);
+  }
+
+  return {
+    type: TYPE_URL,
+    message: url.toString().replace(/%2C/g, ",")
+  };
 }
 
 module.exports = generatePolyfillURL;

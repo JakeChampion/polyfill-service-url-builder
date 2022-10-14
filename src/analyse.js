@@ -1,9 +1,14 @@
 "use strict";
 
 module.exports = async function parseFile(argv) {
-  const cwd = argv.cwd || process.cwd();
+  const {
+    cwd = process.cwd(),
+    hostname,
+    flags,
+    useComputeAtEdgeBackend,
+    unknown,
+  } = argv;
   const omitList = argv.omit || [];
-  const hostname = argv.hostname;
   const browserslist = require('browserslist');
   const browsersListConfig = browserslist.loadConfig({
     path: cwd,
@@ -86,7 +91,7 @@ module.exports = async function parseFile(argv) {
   const filteredFeatureList = featureList.filter((feat) => !omitList.includes(feat))
   const uniqueFeatureList = [...new Set(filteredFeatureList)];
 
-  const result = await generatePolyfillURL(uniqueFeatureList, browsers, hostname);
+  const result = await generatePolyfillURL(uniqueFeatureList, browsers, hostname, flags, useComputeAtEdgeBackend, unknown);
 
   if (result.type === generatePolyfillURL.TYPE_URL) {
     console.log(result.message);

@@ -22,12 +22,15 @@ test('Adds a feature to the features querystring if it exists in polyfill-librar
     expect(actual.message).toEqual(expected);
 });
 
-test('Accepts a custom hostname', async () => {
-    const expected = 'https://example.com/v3/polyfill.min.js?features=Array.prototype.forEach,Array.prototype.map,Map,Set';
+test('Accepts custom params', async () => {
+    const expected = 'https://example.com/v3/polyfill.min.js?features=Array.prototype.forEach,Array.prototype.map,Map,Set&flags=gated,always&use-compute-at-edge-backend=yes&unknown=polyfill';
     const actual = await analyse({
         cwd: path.resolve(__dirname, './fixtures'),
         file: ['array.prototype.foreach.js'],
         hostname: 'example.com',
+        unknown: 'polyfill',
+        useComputeAtEdgeBackend: 'yes',
+        flags: ['gated', 'always'],
     });
     expect(actual.message).toEqual(expected);
 });
