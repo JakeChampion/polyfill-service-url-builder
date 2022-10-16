@@ -28,12 +28,20 @@ This project requires [Node.js] 10.x and [npm]. You can run it with:
 ```bash
 > npx create-polyfill-service-url analyse --file bundle.js [--cwd "/custom/pwd" --omit "Array.prototype.includes" --hostname "polyfill.io"]
 ```
-
 You can pass multiple files as argument if you split your bundle files:
-
 ```bash
 npx create-polyfill-service-url analyse --file app.js vendor.js
 ```
+
+| Option                        | Description                                                                                                 | Default         |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------|
+| --file                        | The path to the JavaScript file(s) to analyse                                                               |                 |
+| --cwd                         | The current working directory                                                                               | `process.cwd()` |
+| --omit                        | A list of features to omit. Example: `Array.prototype.map`                                                  |                 |
+| --hostname                    | The hostname of the polyfill service to use.                                                                | `polyfill.io`   |
+| --use-compute-at-edge-backend | Defines the compute-at-edge-backend usage policy: `yes` or `no`. If empty the server will decide.           |                 |
+| --flags                       | Configuration settings for every polyfill being requested. Possible values are `always` and `gated` or both |                 |
+| --unknown                     | Defines the policy for unsupported browsers: `polyfill` or `ignore`                                         | `polyfill`      |
 
 ### JS API
 ```js
