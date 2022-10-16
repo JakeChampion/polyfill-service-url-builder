@@ -4,7 +4,7 @@ const analyse = require('../src/analyse');
 const path = require('path');
 
 test('Adds a feature to the features querystring if it exists in polyfill-library and presents in the fixture', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach,Array.prototype.map,Map,Set';
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=DOMTokenList.prototype.forEach,NodeList.prototype.forEach,URLSearchParams';
     const actual = await analyse({
         cwd: path.resolve(__dirname, './fixtures'),
         file: ['array.prototype.foreach.js'],
@@ -13,7 +13,7 @@ test('Adds a feature to the features querystring if it exists in polyfill-librar
 });
 
 test('Adds a feature to the features querystring if it exists in polyfill-library and presents in the fixture and required by opts', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach';
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=DOMTokenList.prototype.forEach,NodeList.prototype.forEach,URLSearchParams';
     const actual = await analyse({
         cwd: path.resolve(__dirname, './fixtures'),
         file: ['array.prototype.foreach.js'],
@@ -23,7 +23,7 @@ test('Adds a feature to the features querystring if it exists in polyfill-librar
 });
 
 test('Accepts custom params', async () => {
-    const expected = 'https://example.com/v3/polyfill.min.js?features=Array.prototype.forEach,Array.prototype.map,Map,Set&flags=gated,always&use-compute-at-edge-backend=yes&unknown=polyfill';
+    const expected = 'https://example.com/v3/polyfill.min.js?features=DOMTokenList.prototype.forEach,NodeList.prototype.forEach,URLSearchParams&flags=gated,always&use-compute-at-edge-backend=yes&unknown=polyfill';
     const actual = await analyse({
         cwd: path.resolve(__dirname, './fixtures'),
         file: ['array.prototype.foreach.js'],

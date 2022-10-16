@@ -73,7 +73,7 @@ async function generatePolyfillURL(
   if (supportedBrowsers) {
     supportedBrowsers = normaliseBrowsers(supportedBrowsers);
   }
-  const polyfillUrl = "https://" + hostname + "/v3/polyfill.min.js";
+  const polyfillUrl = new URL('/v3/polyfill.min.js', 'https://' + hostname);
   const aliases = await polyfillLibrary.listAliases();
   const polyfills = await polyfillLibrary.listAllPolyfills();
   const featuresInPolyfillLibrary = new Set();
@@ -165,24 +165,23 @@ async function generatePolyfillURL(
     };
   }
 
-  const url = new URL(polyfillUrl);
-  url.searchParams.set("features", sortedFeatures.join(","));
+  polyfillUrl.searchParams.set("features", sortedFeatures.join(","));
 
   if (flags) {
-    url.searchParams.set("flags", Array.isArray(flags) ? flags.join(",") : flags);
+    polyfillUrl.searchParams.set("flags", Array.isArray(flags) ? flags.join(",") : flags);
   }
 
   if (useComputeAtEdgeBackend) {
-    url.searchParams.set("use-compute-at-edge-backend", useComputeAtEdgeBackend);
+    polyfillUrl.searchParams.set("use-compute-at-edge-backend", useComputeAtEdgeBackend);
   }
 
   if (unknown) {
-    url.searchParams.set("unknown", unknown);
+    polyfillUrl.searchParams.set("unknown", unknown);
   }
 
   return {
     type: TYPE_URL,
-    message: url.toString().replace(/%2C/g, ",")
+    message: polyfillUrl.toString().replace(/%2C/g, ",")
   };
 }
 
