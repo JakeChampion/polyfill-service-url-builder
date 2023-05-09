@@ -3,20 +3,20 @@
 const generatePolyfillURL = require('../src/index');
 
 test('Adds a feature to the features querystring if it exists in polyfill-library', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach';
-    const actual = await generatePolyfillURL(["Array.prototype.forEach"])
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Promise';
+    const actual = await generatePolyfillURL(["Promise"])
     expect(actual.message).toEqual(expected);
 });
 
 test('Does not add duplicated features to the features querystring', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach';
-    const actual = await generatePolyfillURL(["Array.prototype.forEach", "Array.prototype.forEach"])
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Promise';
+    const actual = await generatePolyfillURL(["Promise", "Promise"])
     expect(actual.message).toEqual(expected);
 });
 
 test('Does not add features to the features querystring which do not exist in polyfill-library', async () => {
-    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach';
-    const actual = await generatePolyfillURL(["Array.prototype.forEach", "Carrot"])
+    const expected = 'https://polyfill.io/v3/polyfill.min.js?features=Promise';
+    const actual = await generatePolyfillURL(["Promise", "Carrot"])
     expect(actual.message).toEqual(expected);
 });
 
