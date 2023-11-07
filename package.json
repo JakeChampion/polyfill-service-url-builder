@@ -24,7 +24,7 @@
   "version": "2.0.4",
   "dependencies": {
     "@babel/core": "^7.21.8",
-    "@financial-times/js-features-analyser": "0.4.3",
+    "@financial-times/js-features-analyser": "^0.4.3",
     "browserslist": "^4.21.5",
     "execa": "^7.1.1",
     "polyfill-library": "^4.7.0",
