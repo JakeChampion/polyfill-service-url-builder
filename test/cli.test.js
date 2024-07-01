@@ -12,11 +12,11 @@ test("Analyses the bundle inners and returns the polyfill url", async () => {
 });
 
 test("Analyses the bundle inners and applies custom options", async () => {
-  const expected = "https://example.com/polyfill/v3/polyfill.min.js?features=DOMTokenList.prototype.forEach,NodeList.prototype.forEach,URLSearchParams&flags=gated,always&use-compute-at-edge-backend=yes&unknown=ignore";
+  const expected = "https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=DOMTokenList.prototype.forEach,NodeList.prototype.forEach,URLSearchParams&flags=gated,always&use-compute-at-edge-backend=yes&unknown=ignore";
   const actual = await node(
     cli, "analyse",
     "--file", "test/fixtures/array.prototype.foreach.js",
-    "--hostname", "example.com",
+    "--hostname", "cdnjs.cloudflare.com/polyfill",
     "--omit", "Array.prototype.map",
     "--unknown", "ignore",
     "--flags", "gated", "always",
