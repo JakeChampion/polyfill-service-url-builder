@@ -65,7 +65,7 @@ function normaliseBrowsers(browsers) {
 async function generatePolyfillURL(
   features = [],
   supportedBrowsers = [],
-  hostname = "polyfill.io",
+  hostname = "cdnjs.cloudflare.com",
   flags = null,
   useComputeAtEdgeBackend = null,
   unknown = null
@@ -73,7 +73,7 @@ async function generatePolyfillURL(
   if (supportedBrowsers) {
     supportedBrowsers = normaliseBrowsers(supportedBrowsers);
   }
-  const polyfillUrl = new URL('/v3/polyfill.min.js', 'https://' + hostname);
+  const polyfillUrl = new URL('/polyfill/v3/polyfill.min.js', 'https://' + hostname);
   const aliases = await polyfillLibrary.listAliases();
   const polyfills = await polyfillLibrary.listAllPolyfills();
   const featuresInPolyfillLibrary = new Set();
