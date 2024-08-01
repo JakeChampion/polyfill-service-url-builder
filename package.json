@@ -34,12 +34,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Financial-Times/polyfill-service-url-builder.git"
+    "url": "https://github.com/JakeChampion/polyfill-service-url-builder.git"
   },
   "bugs": {
-    "url": "https://github.com/Financial-Times/polyfill-service-url-builder/issues"
+    "url": "https://github.com/JakeChampion/polyfill-service-url-builder/issues"
   },
-  "homepage": "https://github.com/Financial-Times/polyfill-service-url-builder#readme",
+  "homepage": "https://github.com/JakeChampion/polyfill-service-url-builder#readme",
   "author": "Jake Champion",
   "license": "MIT",
   "description": "Analyse your JavaScript file and generate a polyfill.io URL based on all the features that are being used from within the JavaScript file.",
