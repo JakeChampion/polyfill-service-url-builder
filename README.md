@@ -1,6 +1,6 @@
-# Polyfill.io URL Builder
+# https://cdnjs.cloudflare.com/polyfill/ URL Builder
 
-A Node.js command-line application for analysing your JavaScript file and generating a https://polyfill.io URL based on all the features that are being used from within the JavaScript file.
+A Node.js command-line application for analysing your JavaScript file and generating a https://cdnjs.cloudflare.com/polyfill/ URL based on all the features that are being used from within the JavaScript file.
 
 [![NPM version](https://img.shields.io/npm/v/create-polyfill-service-url.svg)](https://www.npmjs.com/package/create-polyfill-service-url)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
@@ -69,7 +69,7 @@ npm test    # verify JavaScript code with ESLint and run the tests
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Financial-Times/polyfill-service-url-builder/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/JakeChampion/polyfill-service-url-builder/tags). 
 
 ## Publishing
 
